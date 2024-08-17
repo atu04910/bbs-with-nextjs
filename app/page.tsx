@@ -4,7 +4,8 @@ import { BBSData } from "./types/types";
 async function getBBSAllData() {
 
   // fetch は配列で返却される
-  const response = await fetch("http://localhost:3000/api/post", {
+  //const response = await fetch("http://localhost:3000/api/post", {
+    const response = await fetch("https://bbs-with-nextjs-two.vercel.app/api/post", {
     cache: "no-store",
   });
   

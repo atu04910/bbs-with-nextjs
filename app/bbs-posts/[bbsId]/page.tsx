@@ -6,7 +6,8 @@ import React from 'react'
 async function getDetailBBSData(id: number) {
 
     // テンプレートリテラルで id を指定する
-    const response = await fetch(`http://localhost:3000/api/post/${id}`, {
+    //const response = await fetch(`http://localhost:3000/api/post/${id}`, {
+    const response = await fetch(`https://bbs-with-nextjs-two.vercel.app/api/post/${id}`, {
       cache: "no-store",
     });
     
