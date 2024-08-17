@@ -1,6 +1,7 @@
 "use client"
 
 import { postBBS } from '@/app/actions/postBBSAction'
+import { formSchema } from '@/app/components/formSchema'
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
@@ -12,18 +13,6 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
-export const formSchema = z.object({
-    username: z
-        .string()
-        .min(2, {message:"ユーザ名は 2 文字以上で入力してください"}),
-    title: z
-        .string()
-        .min(2, {message:"タイトルは 2 文字以上で入力してください"}),
-    content: z
-        .string()
-        .min(10, {message:"本文は 10 文字以上で入力してください"})
-        .max(140, {message:"本文は 140 文字以内で入力してください。"}),
-});
 
 const CreateBBSPage = () => {
 
